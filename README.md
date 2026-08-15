@@ -1,20 +1,19 @@
-# Phase 2 Code Challenge: Plantsy
+# Plantsy
+
+Plantsy is a React application for managing the admin side of a plant store. It connects to a `json-server` backend to fetch, add, and search for plants, with the ability to toggle a plant's stock status directly on the page.
 
 ## Demo
 
-Use this gif as an example of how the app should work.
-
 ![Demo GIF](./demo.gif)
 
-## Instructions
+## Features
 
-Welcome to Plantsy! You've been tasked with building out some features for the
-admin side of a plant store. The designers have put together the components and
-CSS. Now it's up to you to bring the features to life by adding stateful logic
-as well as persisting data to the backend via our API.
+As a user, you can:
 
-Your job will be to make our app work according to the user stories you will
-find the [Deliverables](#Deliverables) section.
+1. View all plants when the app loads.
+2. Add a new plant to the page by submitting the form — this sends a `POST` request to the backend and the new plant appears immediately.
+3. Mark a plant as "sold out" by clicking its status button. This toggles per plant and does not persist to the backend (resets on page refresh).
+4. Search for plants by name and see the list filter in real time. Clearing the search shows the full list again.
 
 ## Setup
 
@@ -29,18 +28,7 @@ in the browser to verify that your backend is working before you proceed!
 
 The base URL for your backend is: `http://localhost:6001`
 
-## Deliverables
-
-As a user:
-
-1. When the app starts, I can see all plants.
-2. I can add a new plant to the page by submitting the form.
-3. I can mark a plant as "sold out".
-4. I can search for plants by their name and see a filtered list of plants.
-
-### Endpoints for Core Deliverables
-
-#### GET /plants
+### GET /plants
 
 Example Response:
 
@@ -61,7 +49,7 @@ Example Response:
 ]
 ```
 
-#### POST `/plants`
+### POST /plants
 
 Required Headers:
 
@@ -91,3 +79,7 @@ Example Response:
   "price": 15.99
 }
 ```
+
+## Screenshot
+
+![Plantshop app screenshot](./src/screenshots/PageScreenshot.png)
